@@ -3,7 +3,8 @@ This repository contains the reference implementation for the paper:
 
 > Xingtong Mu, Xueling Duan, and Ke Deng, "Retrieval-Conditioned Probabilistic Trajectory Prediction for Maritime Early Warning Using AIS Sensor Data," submitted to *IEEE Sensors Journal*.
 
-> ├── Code for the main program
+```text
+├── Code for the main program
 │   ├── dataset_build.py
 │   └── main.py
 │
@@ -20,6 +21,8 @@ This repository contains the reference implementation for the paper:
 │
 ├── requirements.txt
 └── README.md
+```
+
 > 3. Installation
 >    The requirements.txt file provides all dependencies except for the base library. Please use the pip command for installation
 > 4. Raw AIS data
