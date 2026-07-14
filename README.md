@@ -94,8 +94,8 @@ python ablation_retrieval.py
 
 The compressed dataset files for the two study regions contain:
 
-* retrieval reference data;
-* test data; and
+* reference data;
+* test data; 
 * prediction results.
 
 The provided prediction results are consistent with those obtained by running the released code under the corresponding experimental settings.
