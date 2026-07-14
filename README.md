@@ -6,17 +6,17 @@ This repository contains the reference implementation for the paper:
 > 1. Repository Structure
 >    
 >├── Code for the main program\
->   ├── dataset_build.py                 
->   ├── main.py\
+>   &nbsp├── dataset_build.py                 
+>  &nbsp ├── main.py\
 >├── Code for comparative experiments                        
->   ├── baseline_CV_KF.py                    
->    ├── baseline_LSTM.py             
->   ├── baseline_BiLSTM_Attn.py        
->   ├── baseline_Prob_GRU.py                 
->   ├── baseline_BiLSTM_MDN.py
+>  &nbsp ├── baseline_CV_KF.py                    
+>  &nbsp  ├── baseline_LSTM.py             
+>   &nbsp├── baseline_BiLSTM_Attn.py        
+>  &nbsp ├── baseline_Prob_GRU.py                 
+>   &nbsp├── baseline_BiLSTM_MDN.py
 >├── Code for ablation experiment      
->   ├── ablation_attention.py           
->   ├── ablation_retrieval.py 
+> &nbsp  ├── ablation_attention.py           
+>  &nbsp ├── ablation_retrieval.py 
 >├── requirements.txt
 >└── README.md
 > 3. Installation
