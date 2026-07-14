@@ -103,3 +103,10 @@ The provided prediction results are consistent with those obtained by running th
 ## Acknowledgments and Contact
 
 Thank you for your interest in our work. If you have any questions, suggestions, or encounter any issues while using the code or datasets, please feel free to contact us.
+
+## License
+
+The source code in this repository is released under the MIT License. See the [`LICENSE`](LICENSE) file for details.
+
+The raw AIS data are obtained from MarineCadastre.gov and are not redistributed under this repository's license. Users should comply with the applicable terms and policies of the original data provider.
+
