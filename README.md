@@ -1,7 +1,10 @@
-# Code and Data for Retrieval-Conditioned Probabilistic Trajectory Prediction for Maritime Early Warning Using AIS Sensor Data," submitted to *IEEE Sensors Journal*.
-This repository contains the reference implementation for the paper:
+# Code and Data for Retrieval-Conditioned Probabilistic Trajectory Prediction for Maritime Early Warning Using AIS Sensor Data
 
-> Xingtong Mu, Xueling Duan, and Ke Deng, "Retrieval-Conditioned Probabilistic Trajectory Prediction for Maritime Early Warning Using AIS Sensor Data," submitted to *IEEE Sensors Journal*.
+This repository provides the reference implementation and datasets for the following paper:
+
+> Xingtong Mu, Xueling Duan, and Ke Deng, “Retrieval-Conditioned Probabilistic Trajectory Prediction for Maritime Early Warning Using AIS Sensor Data,” submitted to *IEEE Sensors Journal*.
+
+## 1. Repository Structure
 
 ```text
 ├── Code for the main program
@@ -23,21 +26,76 @@ This repository contains the reference implementation for the paper:
 └── README.md
 ```
 
-> 2. Installation\
->    The requirements.txt file provides all dependencies except for the base library. Please use the pip command for installation
-> 3. Raw AIS data\
->    The original data is too large to be displayed here. Please visit the official website of MarineCadastre:https://marinecadastre.gov/ais/.
->    Download the daily AIS files for **January 1–20, 2025**, and place them in the working directory as:
+## 2. Installation
 
+Install the required Python dependencies using:
+
+```bash
+pip install -r requirements.txt
 ```
+
+Please ensure that the required base libraries and the appropriate Python environment have been installed before running the code.
+
+## 3. Raw AIS Data
+
+The original AIS data are too large to be included in this repository. The data can be downloaded from the official MarineCadastre website:
+
+https://marinecadastre.gov/ais/
+
+Download the daily AIS files from **January 1 to January 20, 2025**, and place them in the working directory using the following filenames:
+
+```text
 ais-2025-01-01.txt
 ais-2025-01-02.txt
 ...
 ais-2025-01-20.txt
 ```
-> 4. Build the two regional datasets\
->    Please place the raw data in the same folder as the dataset-build. py program and run the dataset building program. Please refer to the main text and program comments for specific latitude and longitude.
-> 5. Experiment\
->    Please prioritize running main. py before conducting comparative and ablation experiments. Please note that the code for the comparison and ablation experiments is based on main.exe. Please place them in one folder.
-> 6. Results\
->    The zip files of our two datasets provide their respective references, test data, and test results. This is consistent with the results obtained by running our code.
+
+## 4. Dataset Construction
+
+Place the downloaded raw AIS files in the same directory as `dataset_build.py`, and then run:
+
+```bash
+python dataset_build.py
+```
+
+This script constructs the datasets for the two study regions. The latitude and longitude ranges used for regional data extraction are described in the paper and in the comments within `dataset_build.py`.
+
+## 5. Running the Experiments
+
+Run the main experiment first:
+
+```bash
+python main.py
+```
+
+After completing the main experiment, run the comparative and ablation experiments as needed.
+
+The comparative and ablation experiment scripts reuse components and configurations from `main.py`. Therefore, all experiment scripts should be placed under the same project directory, and the original repository structure should be preserved.
+
+Example commands include:
+
+```bash
+python baseline_CV_KF.py
+python baseline_LSTM.py
+python baseline_BiLSTM_Attn.py
+python baseline_Prob_GRU.py
+python baseline_BiLSTM_MDN.py
+```
+
+For the ablation experiments, run:
+
+```bash
+python ablation_attention.py
+python ablation_retrieval.py
+```
+
+## 6. Results
+
+The compressed dataset files for the two study regions contain:
+
+* retrieval reference data;
+* test data; and
+* prediction results.
+
+The provided prediction results are consistent with those obtained by running the released code under the corresponding experimental settings.
